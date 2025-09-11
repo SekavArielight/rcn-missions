@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Users, Heart, Globe, Play, ArrowRight } from "lucide-react"
+import { MapPin, Users, Heart, Globe, Play, ArrowRight, Star, CheckCircle, Mail } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
@@ -95,11 +95,14 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-lg px-8">
                   <Play className="mr-2 h-5 w-5" />
-                  Watch Latest Crusade
+                  Watch Latest Message
                 </Button>
                 <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
                   <Heart className="mr-2 h-5 w-5" />
                   Partner With Us
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+                  Request Prayer
                 </Button>
               </div>
 
@@ -143,7 +146,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Mission Statement */}
+      {/* Ministry Overview Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -157,29 +160,278 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Stats */}
+      {/* Leadership Spotlight */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Apostolic Leadership</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Meet the visionary leaders called to restore apostolic order in these end times
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/apostle-arome-osayi-portrait-leadership.jpg"
+                    alt="Apostle Arome Osayi"
+                    width={80}
+                    height={80}
+                    className="rounded-full"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold">Apostle Arome Osayi</h3>
+                    <p className="text-muted-foreground">Senior Pastor & Founder</p>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Called to restore apostolic Christianity and prepare the church for Christ's return through powerful
+                  teaching and international missions.
+                </p>
+                <Link href="/leadership" className="inline-flex items-center text-primary hover:underline">
+                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <Image
+                    src="/pastor-wife-ministry-leader-portrait.jpg"
+                    alt="Pastor Wife"
+                    width={80}
+                    height={80}
+                    className="rounded-full"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold">Pastor [Wife's Name]</h3>
+                    <p className="text-muted-foreground">Co-Pastor & Women's Ministry Leader</p>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Supporting the apostolic vision through women's ministry, missions support, and spiritual mentorship
+                  across the network.
+                </p>
+                <Link href="/leadership" className="inline-flex items-center text-primary hover:underline">
+                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section id="missions" className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Current Mission Projects</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Bringing the Gospel to unreached communities and providing relief to those in need
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="relative h-48">
+                <Image
+                  src="/mission-north-east-nigeria-project.jpg"
+                  alt="North East Nigeria Crusades"
+                  fill
+                  className="object-cover"
+                />
+                <Badge className="absolute top-4 left-4 bg-primary">Active</Badge>
+              </div>
+              <CardContent className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold">North East Nigeria Crusades</h3>
+                  <p className="text-muted-foreground">
+                    Bringing the Gospel to unreached communities in conflict zones
+                  </p>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="flex items-center text-muted-foreground">
+                    <MapPin className="mr-1 h-4 w-4" />
+                    North East Nigeria
+                  </span>
+                  <span className="text-primary font-medium">5,000+ souls reached</span>
+                </div>
+                <Link href="/missions" className="inline-flex items-center text-primary hover:underline">
+                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="relative h-48">
+                <Image
+                  src="/mission-balm-gilead-medical-relief.jpg"
+                  alt="Balm of Gilead Medical Relief"
+                  fill
+                  className="object-cover"
+                />
+                <Badge className="absolute top-4 left-4 bg-accent">Ongoing</Badge>
+              </div>
+              <CardContent className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold">Balm of Gilead Medical Relief</h3>
+                  <p className="text-muted-foreground">
+                    Providing healthcare and medical supplies to underserved areas
+                  </p>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="flex items-center text-muted-foreground">
+                    <MapPin className="mr-1 h-4 w-4" />
+                    Multiple Locations
+                  </span>
+                  <span className="text-primary font-medium">10,000+ people served</span>
+                </div>
+                <Link href="/missions" className="inline-flex items-center text-primary hover:underline">
+                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Video Content */}
+      <section id="videos" className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Latest Teaching</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Powerful messages on apostolic order and end-time preparation
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative aspect-video md:aspect-square">
+                  <Image
+                    src="/video-apostolic-order-thumbnail.jpg"
+                    alt="The Apostolic Hour Has Come"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                    <Button size="lg" className="rounded-full w-16 h-16 p-0">
+                      <Play className="h-6 w-6" />
+                    </Button>
+                  </div>
+                </div>
+                <CardContent className="p-8 flex flex-col justify-center space-y-4">
+                  <div className="space-y-2">
+                    <Badge variant="secondary">Latest Message</Badge>
+                    <h3 className="text-2xl font-bold">The Apostolic Hour Has Come</h3>
+                    <p className="text-muted-foreground">
+                      A powerful message on recognizing and walking in apostolic authority in these end times.
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                    <span>Apostle Arome Osayi</span>
+                    <span>•</span>
+                    <span>52:30</span>
+                    <span>•</span>
+                    <span>Jan 15, 2024</span>
+                  </div>
+                  <Link href="/videos" className="inline-flex items-center text-primary hover:underline">
+                    Watch Full Library <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </CardContent>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Carousel */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Lives Transformed</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Hear from those whose lives have been touched by the apostolic ministry
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="p-6">
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground italic">
+                  "The ministry of Apostle Arome has transformed our understanding of apostolic Christianity. Our church
+                  has experienced unprecedented growth and spiritual awakening."
+                </p>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <span className="text-primary font-medium text-sm">PJ</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">Pastor John Doe</p>
+                    <p className="text-sm text-muted-foreground">Lagos, Nigeria</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6">
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground italic">
+                  "Through RCN Missions, I received healing and now serve as a missionary in remote villages. God is
+                  doing amazing things through this ministry."
+                </p>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <span className="text-primary font-medium text-sm">MJ</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">Sister Mary Johnson</p>
+                    <p className="text-sm text-muted-foreground">Kampala, Uganda</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Ministry Statistics */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="space-y-2">
                 <div className="text-3xl font-bold text-primary">50+</div>
                 <div className="text-sm text-muted-foreground">Mission Fields</div>
               </CardContent>
             </Card>
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="space-y-2">
                 <div className="text-3xl font-bold text-primary">100K+</div>
                 <div className="text-sm text-muted-foreground">Lives Touched</div>
               </CardContent>
             </Card>
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="space-y-2">
                 <div className="text-3xl font-bold text-primary">25+</div>
                 <div className="text-sm text-muted-foreground">Countries Reached</div>
               </CardContent>
             </Card>
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="space-y-2">
                 <div className="text-3xl font-bold text-primary">500+</div>
                 <div className="text-sm text-muted-foreground">Crusades Held</div>
@@ -189,8 +441,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Newsletter Signup & Connect */}
       <section className="py-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-balance">Stay Connected with RCN Missions</h2>
+                <p className="text-xl opacity-90 text-pretty leading-relaxed">
+                  Receive ministry updates, prayer requests, and exclusive content from Apostle Arome Osayi.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "Weekly ministry updates",
+                    "Prayer requests and testimonies",
+                    "Early access to teaching materials",
+                    "Mission trip opportunities",
+                  ].map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 opacity-90" />
+                      <span>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <Card className="p-6">
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground">Join Our Newsletter</h3>
+                    <p className="text-muted-foreground">Get the latest updates delivered to your inbox</p>
+                  </div>
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground"
+                    />
+                    <Button className="w-full">
+                      <Mail className="mr-2 h-4 w-4" />
+                      Subscribe Now
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground">We respect your privacy. Unsubscribe at any time.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-balance">Join the Apostolic Movement</h2>
@@ -206,7 +508,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                className="text-lg px-8 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent bg-transparent"
               >
                 Become a Partner
                 <ArrowRight className="ml-2 h-5 w-5" />
