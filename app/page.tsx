@@ -566,7 +566,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Remnant Christian Network Missions. All rights reserved.</p>
+            <p>&copy; 2025 Remnant Christian Network Missions. All rights reserved.</p>
           </div>
         </div>
       </footer>
