@@ -7,6 +7,7 @@ import { MapPin, Users, Heart, Globe, Play, ArrowRight, Star, CheckCircle, Mail,
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import Footer from "@/components/Footer"
 
 export default function HomePageClient() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -554,58 +555,7 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-muted py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">R</span>
-                </div>
-                <span className="font-bold text-lg">RCN Missions</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Restoring apostolic order for Christ's return through international missions and ministry.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Ministry</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="/about">About Us</Link>
-                <Link href="/leadership">Leadership</Link>
-                <Link href="/mission-fields">Mission Fields</Link>
-                <Link href="/testimonies">Testimonies</Link>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Resources</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="/sermons">Sermons</Link>
-                <Link href="/books">Books</Link>
-                <Link href="/prayer-requests">Prayer Requests</Link>
-                <Link href="/events">Events</Link>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Connect</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="/contact">Contact Us</Link>
-                <Link href="/partner-with-us">Partner With Us</Link>
-                <Link href="/newsletter">Newsletter</Link>
-                <Link href="/social-media">Social Media</Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Remnant Christian Network Missions. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

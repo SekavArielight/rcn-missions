@@ -27,6 +27,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import Footer from "@/components/Footer"
 
 const impactStories = [
   {
@@ -774,61 +775,7 @@ export default function GivingPageClient() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-muted py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <Link href="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">R</span>
-                </div>
-                <span className="font-bold text-lg">RCN Missions</span>
-              </Link>
-              <p className="text-sm text-muted-foreground">
-                Transforming lives through kingdom partnership and apostolic ministry worldwide.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Give</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div>One-time Gift</div>
-                <div>Monthly Partnership</div>
-                <div>Legacy Giving</div>
-                <div>Corporate Partnership</div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Support</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div>Giving FAQ</div>
-                <div>Tax Information</div>
-                <div>Financial Reports</div>
-                <div>Contact Giving Team</div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Security</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div className="flex items-center space-x-2">
-                  <Shield className="h-4 w-4" />
-                  <span>SSL Secured</span>
-                </div>
-                <div>PCI Compliant</div>
-                <div>Bank-level Security</div>
-                <div>Privacy Protected</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Remnant Christian Network Missions. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

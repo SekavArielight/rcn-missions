@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { MapPin, Phone, Mail, Clock, Send, Heart, Globe, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import Footer from "@/components/Footer"
 
 export default function ContactPageClient() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -487,68 +488,7 @@ export default function ContactPageClient() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-muted py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <Link href="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">R</span>
-                </div>
-                <span className="font-bold text-lg">RCN Missions</span>
-              </Link>
-              <p className="text-sm text-muted-foreground">
-                Restoring apostolic order for Christ's return through international missions and ministry.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Ministry</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="/about" className="block hover:text-foreground transition-colors">
-                  About Us
-                </Link>
-                <Link href="/leadership" className="block hover:text-foreground transition-colors">
-                  Leadership
-                </Link>
-                <Link href="/missions" className="block hover:text-foreground transition-colors">
-                  Mission Fields
-                </Link>
-                <div>Testimonies</div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Resources</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="/videos" className="block hover:text-foreground transition-colors">
-                  Sermons
-                </Link>
-                <div>Books</div>
-                <div>Prayer Requests</div>
-                <div>Events</div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold">Connect</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <Link href="/contact" className="block hover:text-foreground transition-colors">
-                  Contact Us
-                </Link>
-                <div>Partner With Us</div>
-                <div>Newsletter</div>
-                <div>Social Media</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Remnant Christian Network Missions. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

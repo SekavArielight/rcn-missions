@@ -26,6 +26,7 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import Footer from "@/components/Footer"
 
 const missionProjects = [
   {
@@ -830,38 +831,7 @@ export default function MissionsClientPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Contact Us</h3>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+123 456 7890</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <span>info@rcnmissions.org</span>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Follow Us</h3>
-              <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                <Link href="https://facebook.com/rcnmissions" className="hover:text-primary transition-colors">
-                  Facebook
-                </Link>
-                <Link href="https://twitter.com/rcnmissions" className="hover:text-primary transition-colors">
-                  Twitter
-                </Link>
-                <Link href="https://instagram.com/rcnmissions" className="hover:text-primary transition-colors">
-                  Instagram
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

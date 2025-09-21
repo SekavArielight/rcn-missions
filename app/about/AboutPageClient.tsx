@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Menu, X } from "lucide-react"
 import Link from "next/link"
+import Footer from "@/components/Footer"
 
 function StatCard({ number, label, delay = 0 }: { number: string; label: string; delay?: number }) {
   return (
@@ -184,6 +185,8 @@ export default function AboutPageClient() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }
