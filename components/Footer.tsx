@@ -84,7 +84,7 @@ export default function Footer() {
             <div className="space-y-3">
               <Link 
                 href="/about" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -93,7 +93,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/leadership" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -102,7 +102,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/missions" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -111,7 +111,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/videos" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -120,7 +120,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/events" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -155,7 +155,7 @@ export default function Footer() {
             <div className="space-y-3">
               <Link 
                 href="/videos" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -164,7 +164,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/gallery" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -173,7 +173,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/giving" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -182,7 +182,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/contact" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -191,7 +191,7 @@ export default function Footer() {
               </Link>
               <Link 
                 href="/contact" 
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                className="block text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               >
                 <span className="flex items-center group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -294,13 +294,13 @@ export default function Footer() {
             </div>
             
             <div className="flex items-center space-x-6 text-sm">
-              <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                 Terms of Service
               </Link>
-              <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                 Contact
               </Link>
             </div>

@@ -65,7 +65,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="flex items-center space-x-3 group cursor-pointer">
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                 <span className="text-primary-foreground font-bold text-lg">R</span>
@@ -90,7 +90,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group ${
+                className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group cursor-pointer ${
                   isActive(item.href)
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
@@ -150,7 +150,7 @@ export default function Navigation({ className = "" }: NavigationProps) {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 group ${
+                    className={`flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 group cursor-pointer ${
                       isActive(item.href)
                         ? "text-primary bg-primary/10 border border-primary/20"
                         : "text-muted-foreground hover:text-foreground hover:bg-muted/50"

@@ -122,4 +122,24 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Ensure all clickable elements have pointer cursor */
+  button, 
+  [role="button"], 
+  a, 
+  input[type="button"], 
+  input[type="submit"], 
+  input[type="reset"],
+  [data-slot="button"] {
+    cursor: pointer;
+  }
+  
+  /* Disabled elements should not have pointer cursor */
+  button:disabled,
+  [role="button"]:disabled,
+  a:disabled,
+  input:disabled,
+  [data-slot="button"]:disabled {
+    cursor: not-allowed;
+  }
 }
